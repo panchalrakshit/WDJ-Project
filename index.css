@@ -1,1 +1,92 @@
-hellow
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #28282B;
+}
+#Fixed-Navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+#Inner-fixed-Navbar{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4B0082;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+
+td{
+    font-size: 25px;
+    padding-inline-start: 40px;
+    
+}
+a{
+    
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
+}
+a:hover{
+    font-size: 27px;
+    color:#242323;
+}
+#linkedinimg{
+    padding-inline-start: 30px;
+    height: 30px;
+    width: 30px;
+}
+img:hover{
+    size: 35px;
+}
+#tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+#icons{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 20%;
+}
+#githubimg{
+    padding-inline-start: 30px;
+    height: 30px;
+    width: 30px;
+}
+#Info-Section{
+    height: 400px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+#Text-Part{
+    width: 60%;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;
+}
+
+#Img-Section{
+    display: flex;
+    
+    align-items: center;
+    width: 40%;
+}
+
+#personalimg{
+    padding-left: 100px;
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+}
