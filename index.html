@@ -2,9 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Blog Webpage</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        /* small helper so CSS-based smooth scroll works as a fallback */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -13,60 +21,293 @@
             <div id="tab">
                 <table id="NavTab">
                     <tr>
-                        <td><a href="projects.html">Home</a></td>
-                        <td><a href="projects.html">Skills</a></td>
-                        <td><a href="projects.html">Projects</a></td>
-                        <td><a href="projects.html">Get In Touch</a></td>
+                        <!-- changed to internal anchors -->
+                        <td><a href="#home" class="nav-link">Home</a></td>
+                        <td><a href="#skills" class="nav-link">Skills</a></td>
+                        <td><a href="#projects" class="nav-link">Projects</a></td>
+                        <td><a href="getintouch.html" class="nav-link">Get In Touch</a></td>
                     </tr>
                 </table>
             </div>
             <div id="icons">
-                <img id="linkedinimg" src="./icons/linkedin.png" alt="icons">
-                <img id="githubimg" src="./icons/github.png" alt="">
+                <a href="https://www.linkedin.com/in/panchal-rakshit-1ba51b249/"><img id="linkedinimg" src="./icons/linkedin.png" alt="icons" /></a>
+                <a href="https://github.com/dashboard"></a><img id="githubimg" src="./icons/github.png" alt="" /></a>
             </div>
         </div>
     </div>
-    <div class="hero">
+
+    <!-- HOME / HERO (id added) -->
+    <div class="hero" id="home">
         <div id="Inner-hero">
             <div class="left">
-                <h1>Rakshit Panchal</h1>
+                <h1>I'm Rakshit Panchal</h1>
                 <h2 class="lead">
-                    I'm a passionate developer with 5+ years of experience building web applications. I love turning complex problems into simple, beautiful, and intuitive solutions.
-            </h2>
-                <a href="#" class="cta">
-                    Let’s get started <span class="arrow">›</span>
-                </a>
+                    I'm a passionate developer with 5+ years of experience building web applications. I love turning
+                    complex
+                    problems into simple, beautiful, and intuitive solutions.
+                </h2>
             </div>
 
             <div class="right">
                 <div class="avatar">
-                    <img src="./icons/personalimg1.jpeg" alt="profile">
+                    <img src="./icons/personalimg1.jpeg" alt="profile" />
                 </div>
             </div>
         </div>
     </div>
+
     <div id="uniq-main">
-        <h1 id="uniq-head">Key Feature's</h1>
+        <h1 id="uniq-head">Key Focuses On</h1>
         <div id="uniq-inner-main">
             <section id="one" class="pad-same">
-                <img src="./icons/code.png" height="100px" width="100px">
+                <img src="./icons/code.png" height="100px" width="100px" />
                 <h2>Clean Code</h2>
-                
             </section>
             <section id="two" class="pad-same">
-                <img src="./icons/design.png" height="100px" width="100px">
+                <img src="./icons/design.png" height="100px" width="100px" />
                 <h2>Design Focus</h2>
-                
             </section>
             <section id="three" class="pad-same">
-                <img src="./icons/performance.png" height="100px" width="100px">
+                <img src="./icons/performance.png" height="100px" width="100px" />
                 <h2>Design Focus</h2>
             </section>
         </div>
     </div>
-    <div></div>
 
-    <link rel="stylesheet" href="index.css">
+    <!-- SKILLS (id updated so anchor works) -->
+    <section class="skills-section" id="skills">
+        <div class="skills-header">
+            <h2>Skills & Technologies</h2>
+            <p>A comprehensive toolkit for building modern web applications</p>
+        </div>
+
+        <div class="cards-container">
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <div class="tags-wrapper">
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Tailwind CSS</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">Vue.js</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <div class="tags-wrapper">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">MongoDB</span>
+                    <span class="tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools & Others</h3>
+                <div class="tags-wrapper">
+                    <span class="tag">Git</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects-section">
+        <div class="container">
+            
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>A selection of my recent work and side projects</p>
+            </div>
+
+            <div class="projects-grid">
+                
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="./icons/crystalline.png" alt="E-Commerce Platform">
+                    </div>
+                    <div class="card-content">
+                        <h3>Jewellery E-Commerce</h3>
+                        <p class="description">A full-stack e-commerce solution</p>
+                        <div class="tags-container">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="./icons/snake game.png" alt="Task Management App">
+                    </div>
+                    <div class="card-content">
+                        <h3>Snake Game</h3>
+                        <p class="description">Collaborative game developed in Java only for Codefest.</p>
+                        <div class="tags-container">
+                            <span class="tag">Core Java</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-image">
+                        <img src="./icons/Screenshot 2025-12-05 194125.png" alt="Portfolio Generator">
+                    </div>
+                    <div class="card-content">
+                        <h3>Hospital ERP system</h3>
+                        <p class="description">A tool that helps hospital's to be worked more effective and Efficiently.</p>
+                        <div class="tags-container">
+                            <span class="tag">HTMl</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySql</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES (keeps same structure; id added in case you want to link directly) -->
+    <section class="certificate-section" id="certificates">
+        <h2 class="section-title">My Certifications</h2>
+
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <div class="cert-card">
+                            <img src="./icons/WhatsApp Image 2025-12-03 at 5.19.11 PM.jpeg" alt="Certificate 1" />
+                            <div class="cert-info">
+                                <h3>Certificate of Employee Training Program</h3>
+                                <p>Issued by: Fusion Business solution Pvt. ltd.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="cert-card">
+                            <img src="./icons/WhatsApp Image 2025-12-03 at 5.19.11 PM9(1).jpeg" alt="Certificate 2" />
+                            <div class="cert-info">
+                                <h3>JavaScript Algorithms</h3>
+                                <p>Issued by: FreeCodeCamp</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="cert-card">
+                            <img src="./icons/WhatsApp Image 2025-12-03 at 5.19.12 PM(2).jpeg" alt="Certificate 3" />
+                            <div class="cert-info">
+                                <h3>CS50: Computer Science</h3>
+                                <p>Issued by: Harvard</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="cert-card">
+                            <img src="./icons/WhatsApp Image 2025-12-03 at 5.28.19 PM(3).jpeg" alt="Certificate 4" />
+                            <div class="cert-info">
+                                <h3>React Native Expert</h3>
+                                <p>Issued by: Meta</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="carousel-btn next-btn" id="nextBtn">&#10095;</button>
+        </div>
+
+        <div class="carousel-nav">
+            <button class="carousel-indicator current-slide"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+            <button class="carousel-indicator"></button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+    <div class="footer-content">
+
+        <!-- Column 1: Brand/Bio -->
+        <div class="footer-col">
+            <h4>Rakshit Panchal</h4>
+            <p style="font-size: 0.9rem; line-height: 1.6;">
+                A passionate Full Stack Developer focused on building accessible,
+                pixel-perfect, and performant web experiences.
+            </p>
+
+            <!-- Correct visible icons -->
+            <div class="social-links-footer">
+                <a href="https://github.com/yourusername" class="social-btn">
+                    <img src="./icons/github.png" alt="GitHub">
+                </a>
+
+                <a href="https://www.linkedin.com/in/panchal-rakshit-1ba51b249/" class="social-btn">
+                    <img src="./icons/linkedin.png" alt="LinkedIn">
+                </a>
+
+                <a href="#" class="social-btn">
+                    <img src="./icons/twitter.png" alt="Twitter">
+                </a>
+
+                <a href="#" class="social-btn">
+                    <img src="./icons/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="getintouch.html">Contact</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul class="contact-info">
+                <li>
+                    <img src="./icons/email.png" class="icon-sm" alt="Email">
+                    <span>hello@rakshitpanchal.com</span>
+                </li>
+                <li>
+                    <img src="./icons/location.png" class="icon-sm" alt="Location">
+                    <span>Ahmedabad, India</span>
+                </li>
+                <li>
+                    <img src="./icons/phone.png" class="icon-sm" alt="Phone">
+                    <span>+91 98765 43210</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <small>© <span id="year">2024</span> Rakshit Panchal. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+
     <script src="index.js"></script>
 </body>
 

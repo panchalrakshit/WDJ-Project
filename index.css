@@ -9,8 +9,15 @@ body{
     align-items: center;
     height: 50px;
     width: 100%;
+
+    position: static !important; /* ensures it's not fixed */
+  top: auto !important;
+  left: auto !important;
+  width: 100%;
+  z-index: auto;
 }
 #Inner-fixed-Navbar{
+    
     width: 80%;
     height: 100%;
     display: flex;
@@ -86,8 +93,9 @@ img:hover{
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 40px;
   margin: 0 0 16px 0;
+  color: #6b7280;
 }
 
 .lead {
@@ -131,22 +139,21 @@ h1 {
 #uniq-main{
     padding-top: 30px;
     padding-bottom: 30px;
+    text-align: center;
 }
 #uniq-inner-main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 200px;
  padding-top: 20px; 
+ gap: 100px;
 }
-#uniq-head
-{
-    margin-left: 40%;
-}
+
 .pad-same{
     padding-left: 20px;
-    background-color: #242323;
-    width: 25%;
+    background-color: white;
+    width: 10%;
     height: 100%;
     border-radius: 40px;
     display: flex;
@@ -155,3 +162,407 @@ h1 {
     justify-content: center;
     padding-inline: 50px;
 }
+
+
+/* --- Section Headers --- */
+.skills-section {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.skills-header h2 {
+    color:#6b7280;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.skills-header p {
+    color: #6b7280; /* Lighter gray subtitle */
+    font-size: 1.1rem;
+}
+
+/* --- Layout Container for the Three Cards --- */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px; /* Space between cards */
+    flex-wrap: wrap; /* Allows cards to stack on smaller screens */
+}
+
+/* --- Individual Card Styling --- */
+.skill-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 32px;
+    /* Subtle shadow to lift card off background */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f4f6;
+    flex: 1 1 300px; /* Flex grow, flex shrink, base width of 300px */
+    max-width: 400px; /* Prevents them getting too wide on large screens */
+}
+
+.skill-card h3 {
+    color: #374151;
+    margin-bottom: 24px;
+    font-size: 1.25rem;
+}
+
+/* --- Tag Wrapper and Individual Tags --- */
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows tags to wrap to the next line within the card */
+    gap: 12px; /* Space between tags */
+}
+
+.tag {
+    /* Pill styling */
+    background-color: #eef4ff; /* Very light blue background */
+    color: #3b82f6; /* Standard blue text */
+    padding: 8px 16px;
+    border-radius: 9999px; /* Makes ends perfectly round */
+    font-weight: 500;
+    font-size: 0.95rem;
+    white-space: nowrap; /* Prevents long tag names from breaking */
+}
+
+
+
+.certificate-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #28282B;
+}
+
+.section-title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: #6b7280;
+}
+
+/* Container for the whole carousel */
+.carousel-container {
+    position: relative;
+    height: 500px; /* Adjust based on your certificate image aspect ratio */
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* The window that hides the overflow */
+.carousel-track-container {
+    background: white;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* The long strip containing all slides */
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out; 
+}
+
+/* Individual Slides */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Styling */
+.cert-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers area */
+    display: block;
+}
+
+.cert-info {
+    height: 20%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.cert-info h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.cert-info p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn { left: -50px; }
+.next-btn { right: -50px; }
+
+/* Dots Navigation */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.carousel-indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.carousel-indicator.current-slide {
+    background: #333;
+}
+
+
+.projects-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: 6b7280;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: ; /* Dark Slate */
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #6b7280; /* Muted Grey */
+}
+
+/* Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Optional: Add a subtle shadow if you want depth, 
+       though the image is fairly flat */
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Area */
+.card-image {
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect (Optional) */
+.project-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* Content Area */
+.card-content {
+    padding: 24px 0;
+    margin-left: 20px; /* Padding top/bottom only to match image look */
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+/* Tags Styling */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #eef2f6; /* Light grey-blue background */
+    color: #4b5563; /* Dark grey text */
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+.site-footer {
+            background-color: #41334c;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px; /* Subtle movement */
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Footer icon styling */
+.social-links-footer {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.social-links-footer .social-btn img {
+    width: 28px;
+    height: 28px;
+    opacity: 0.9;
+    transition: 0.2s ease;
+}
+
+.social-links-footer .social-btn img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Small icons in contact info */
+.icon-sm {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Column layout already works with your CSS */

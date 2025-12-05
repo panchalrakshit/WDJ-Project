@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Fixed-Navbar">
+        <div id="Inner-fixed-Navbar">
+            <div id="tab">
+                <table id="NavTab">
+                    <tr>
+                        <!-- changed to internal anchors -->
+                        <td><a href="index.html" class="nav-link">Home</a></td>
+                        <td><a href="index.html" class="nav-link">Skills</a></td>
+                        <td><a href="index.html" class="nav-link">Projects</a></td>
+                        <td><a href="getintouch.html" class="nav-link">Get In Touch</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="icons">
+                <img id="linkedinimg" src="./icons/linkedin.png" alt="icons" />
+                <img id="githubimg" src="./icons/github.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <footer id="contact" class="site-footer">
+        <div class="footer-inner container">
+
+            <div class="footer-right">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                        <span class="error" aria-live="polite"></span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Send Message</button>
+                        <div id="formStatus" class="form-status" aria-live="polite"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <small>© <span id="year"></span> Rakshit Panchal. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="getintouch.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src="getintouch.js"></script>
+</body>
+</html>
